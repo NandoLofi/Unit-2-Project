@@ -1,12 +1,5 @@
-const express = require('express')
-const songRouter = express.Router();
+const express = require('express');
+const app = express();
 
 
 
-songRouter.get('/', (req, res) => {
-    res.send('Hello, welcome')
-})
-
-
-
-module.exports = songRouter;

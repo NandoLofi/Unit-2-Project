@@ -21,13 +21,16 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs')
 
 //styling
-app.use(express.static(__dirname + '/public')
+app.use(express.static(__dirname + '/public'))
 
 
 
 
 
 
-
+//main get route
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
 
 app.listen(PORT, () => console.log('We are running'));
