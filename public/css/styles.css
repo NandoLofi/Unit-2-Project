@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+:root {
+    --dark: #0b48de ;
+    --light: #a33807 ;
+    --border: #000000 ;
+    --border-btn: #525252; 
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+.nav-text{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+#description{
+    width: 500px;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-betwee{
+    justify-content: space-between;
+}
+.text-cetner{
+    text-align: center;
+}
+.text-dark{
+    color: var(--dark)
+}
+.inline{
+    display: inline-block;
+}
+.text-light{
+    color: var(--light)
+}
+#header nav{
+    background-color: bisque;
+    padding: 1em 0;
+    width: 100%;
+}
+#site-main{
+    margin-top: 6em;
+    font-family: 'Kanit', sans-serif;;
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+.table td, table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border-btn);
+}
+@media only screen and (mad-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display:block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -999px;
+        left: -999px;
+    }
+    tr {
+        border: 1px solid var(--border);
+    }
+    td{
+        border: none;
+        position: relative;
+    }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <title>Playlist List</title>
+    <script src="https://kit.fontawesome.com/7355fed2f6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-text">Playlist</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+              <div class="filter">
+                  <a href="/"><i class="fa-solid fa-angle-left"></i>All Playlist</a>
+              </div> 
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">New List</h2>
+                <span class="text-light">Input information below to create new playlist</span>
+            </div>
+            <form method="POST" id="add_playlist">
+                <div class="new_playlist">
+                    <div class="form group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Musicstuff">
+                    </div>
+                    <div class="form group">
+                        <label for="playlist" class="text-light">Playlist</label>
+                        <input type="text" name="Playlist Name" value="" placeholder="spotify.newmusicfriday">
+                    </div>
+                    <div class="form group">
+                        <label for="description" class="text-light">Description</label>
+                        <input type="text" id="description" name="Description" value="" placeholder="This is the description for the new playlist to be added">
+                    </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-text-dark">Save</button>
+                </div>        
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

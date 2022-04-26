@@ -6,6 +6,7 @@ const methodOverride = require('method-override')
 const morgan = require('morgan')
 const playController = require('./controllers/playlist')
 const bodyparser = require('body-parser')
+const path = require('path')
 
 const PORT = process.env.PORT
 
@@ -21,7 +22,7 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs')
 
 //styling
-app.use(express.static(__dirname + '/public'))
+app.use('/css', express.static(path.resolve(__dirname, 'public/css')))
 
 
 
