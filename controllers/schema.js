@@ -50,22 +50,22 @@ exports.edit=(req, res)=> {
 
 
 }
-//deleteby ID
-exports.delete=(req, res)=> {
-    const id = req.params.id
-    playlistDB.findByIdAndDelete(id)
-        .then(data=> {
-            if(!data){
-                res.status(404).send({message: "Unable to delete"})
-            }
-            else{
-                res.send({
-                    message: "Playlist successfully deleted"
-                })
+// //deleteby ID
+// exports.delete=(req, res)=> {
+//     const id = req.params.id
+//     playlistDB.findByIdAndDelete(id)
+//         .then(data=> {
+//             if(!data){
+//                 res.status(404).send({message: "Unable to delete"})
+//             }
+//             else{
+//                 res.send({
+//                     message: "Playlist successfully deleted"
+//                 })
 
-            }
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-}
+//             }
+//         })
+//         .catch(err=>{
+//             console.log(err)
+//         })
+// }

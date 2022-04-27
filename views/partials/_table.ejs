@@ -7,8 +7,11 @@
             <a href="/editplaylist?id=<%=playlist[i]._id%>" class="edit">
                 <span class="text-gradient"><i class="fa-solid fa-pen-clip"></i></span>
             </a>
-            <a href="#" class="delete">
-                <span class="text-gradient"><i class="fa-solid fa-ban"></i></span>
+            <a href="/playlist/<%=playlist[i]._id%>">
+                <form action="/playlist/<%=playlist[i]._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete">
+                <!-- <span class="text-gradient"><i class="fa-solid fa-ban"></i></span> -->
+                </form>
             </a>
         </td>        
     </tr>

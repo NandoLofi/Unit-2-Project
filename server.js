@@ -17,7 +17,7 @@ connectDB();
 
 //middleware
 app.use(express.urlencoded({extended: false}));
-
+app.use(methodOverride('_method'));
 
 
 //template engine
