@@ -14,6 +14,6 @@ let schema = new mongoose.Schema ({
         required: true
     }
 })
-const playlistDB = mongoose.model('playlistdb', schema)
+const playlistDB = mongoose.model('newplaylist', schema)
 
-module.exports =  playlistDB
+module.exports =  playlistDB;

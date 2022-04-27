@@ -1,7 +1,10 @@
+<% for(let i=0; i< playlist.length; i++) { %>
+
 <tr>
-    <td>Name</td>    
-    <td>Non-Link</td>
-    <td>Fun Playlist</td>
+    <td><%=i + 1 %> </td>  
+    <td><%=playlist[i].name%> </td>    
+    <td><%=playlist[i].link%> </td>
+    <td><%=playlist[i].desc%> </td>
     <td>
         <a href="/editplaylist" class="edit">
             <span class="text-gradient"><i class="fa-solid fa-pen-clip"></i></span>
@@ -11,3 +14,4 @@
         </a>
     </td>        
 </tr>
+<% } %>
