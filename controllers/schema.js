@@ -4,7 +4,7 @@ let playlistDB = require('../models/playlist')
 exports.create=(req, res)=> {
     if(!req.body){
         res.status(400).send({message: "Must have information to send"});
-        return;
+        ;
     }
     const playlist = new playlistDB({
         name: req.body.name,
