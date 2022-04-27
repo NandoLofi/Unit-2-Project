@@ -7,13 +7,13 @@ let schema = new mongoose.Schema ({
     },
     link: {
         type: String,
-        required: true
+        required: true,
     },
     desc: {
         type: String,
         required: true
     }
 })
-const playlistDB = mongoose.model('newplaylist', schema)
+const playlistDB = mongoose.model('playlistDB', schema)
 
 module.exports =  playlistDB;

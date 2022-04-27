@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
-const bodyparser = require('body-parser')
+const bodyParser = require('body-parser')
 const path = require('path');
 const { Console } = require('console');
 const PORT = process.env.PORT
@@ -19,6 +19,8 @@ connectDB();
 
 //middleware
 app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 
 //template engine

@@ -11,7 +11,7 @@
             <h2 class="text-dark">New List</h2>
             <span class="text-light">Input information below to create new playlist</span>
         </div>
-        <form method="POST" id="add_playlist">
+        <form action="/api/playlist" method="POST" id="add_playlist">
             <div class="new_playlist">
                 <div class="form group">
                     <label for="name" class="text-light">Name</label>
@@ -20,10 +20,12 @@
                 </div>
                 <div class="form group">
                     <label for="playlist" class="text-light">Playlist</label>
+                    <input type="hidden" name="id" value="">
                     <input type="text" name="Playlist Name" value="" placeholder="Link URL">
                 </div>
                 <div class="form group">
                     <label for="description" class="text-light">Description</label>
+                    <input type="hidden" name="id" value="">
                     <input type="text" id="description" name="Description" value="">
                 </div>
             <div class="form-group">
