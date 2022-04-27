@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 const path = require('path');
-const { Console } = require('console');
 const PORT = process.env.PORT
 const connectDB = require('./controllers/database')
 
@@ -17,7 +16,7 @@ app.use(morgan('tiny'));
 connectDB();
 
 //middleware
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 
 
 
@@ -26,6 +25,7 @@ app.set('view engine', 'ejs')
 
 //styling
 app.use('/css', express.static(path.resolve(__dirname, 'public/css')))
+app.use('/js', express.static(path.resolve(__dirname, 'public/js')))
 
 //router
 app.use('/', require('./controllers/routes'))

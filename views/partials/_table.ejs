@@ -4,7 +4,7 @@
         <td><%=playlist[i].link%> </td>
         <td><%=playlist[i].desc%> </td>
         <td>
-            <a href="/editplaylist" class="edit">
+            <a href="/editplaylist?id=<%=playlist[i]._id%>" class="edit">
                 <span class="text-gradient"><i class="fa-solid fa-pen-clip"></i></span>
             </a>
             <a href="#" class="delete">
