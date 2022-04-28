@@ -5,15 +5,12 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 const path = require('path');
-const PORT = process.env.PORT || 3000
-const connectDB = require('./controllers/database')
+const PORT = process.env.PORT
 
 
 //logger
 app.use(morgan('tiny'));
 
-//database connector
-connectDB();
 
 //middleware
 app.use(express.urlencoded({extended: false}));
@@ -25,9 +22,20 @@ app.set('view engine', 'ejs')
 
 //styling
 app.use('/css', express.static(path.resolve(__dirname, 'public/css')))
-app.use('/js', express.static(path.resolve(__dirname, 'public/js')))
 
 //router
 app.use('/', require('./controllers/routes'))
+
+mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,  
+});
+
+const db = mongoose.connection;
+db.on('error', (err) => console.log(err.message + " is mongo not running?"));
+db.on('connected', ()=> console.log('mongoose connected'));
+db.on('disconnected', () => console.log("mongo disconnected"));
+
+
 
 app.listen(PORT, () => console.log('We are running'));
