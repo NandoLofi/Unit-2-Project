@@ -3,13 +3,10 @@ const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
-const morgan = require('morgan')
 const path = require('path');
 const PORT = process.env.PORT
 
 
-//logger
-app.use(morgan('tiny'));
 
 
 //middleware
