@@ -12,12 +12,21 @@ route.get('/playlist', shortRoute.homeRoutes)
 //new playlist route
 route.get('/addplaylist', shortRoute.addPlaylist)
 
-//edit route
-route.get('/editplaylist', shortRoute.editPlaylist)
-
 //delete route
 route.delete('/playlist/:id', (req, res)=>{
     playlistDB.findByIdAndDelete(req.params.id, (err, )=>{
+        res.redirect('/playlist')
+    })
+})
+route.get('/playlist/:id/editplaylist', (req, res)=>{
+    playlistDB.findById(req.params.id, (err, playinfo)=>{
+        res.render('editpl', {playinfo})
+    })
+})
+
+
+route.put('/playlist/:id', (req, res) =>{
+    playlistDB.findByIdAndUpdate(req.params.id, req.body, (err, editedplay) =>{
         res.redirect('/playlist')
     })
 })
@@ -25,7 +34,6 @@ route.delete('/playlist/:id', (req, res)=>{
 //api
 route.post('/api/playlist', controller.create)
 route.get('/api/playlist', controller.find)
-route.put('/api/playlist/:id', controller.edit)
-// route.delete('/api/playlist/:id', controller.delete)
+
 
 module.exports = route

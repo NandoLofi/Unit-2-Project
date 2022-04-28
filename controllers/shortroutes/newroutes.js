@@ -11,12 +11,6 @@ exports.homeRoutes=(req, res)=>{
 exports.addPlaylist=(req, res)=>{
     res.render('newpl')
 }
-exports.editPlaylist=(req, res)=>{
-    axios.get('http://localhost:3000/api/playlist', {params:{id: req.query.id}})
-    .then(function(playlistdata){
-        res.render('editpl', {playlistoptions: playlistdata.data})
-    })
-    .catch(err=>{
-        console.log(err)
-    })   
-}
+// exports.editPlaylist=(req, res)=>{
+//     res.render('editpl')
+// }
