@@ -18,7 +18,7 @@ route.get('/playlist', (req, res) =>{
 
 // add playlist route
 route.get('/playlist/addplaylist', (req, res) =>{
-    res.render('newpl.ejs')
+    res.render('newpl')
 })
 
 route.post('/playlist', (req, res)=> {
