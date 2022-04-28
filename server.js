@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 const path = require('path');
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 const connectDB = require('./controllers/database')
 
 
