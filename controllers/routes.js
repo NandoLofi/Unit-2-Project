@@ -6,6 +6,11 @@ const shortRoute = require('./shortroutes/newroutes');
 let playlistDB = require('../models/playlist')
 
 
+//home heroku route
+route.get('/', (req, res) =>{
+    res.redirect('/playlist')
+})
+
 //homeroute
 route.get('/playlist', shortRoute.homeRoutes)
 
