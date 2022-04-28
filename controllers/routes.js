@@ -1,6 +1,5 @@
 const express = require('express');
 const route = express.Router()
-const controller = require('./schema')
 let playlistDB = require('../models/playlist');
 
 
