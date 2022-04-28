@@ -6,7 +6,7 @@ let playlistDB = require('../models/playlist');
 
 //home route
 route.get('/', (req, res)=>{
-    res.redirect('/playlist')
+    res.send('Welcome!')
 })
 
 //index route

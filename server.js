@@ -14,6 +14,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 
+//template engine
+app.set('view engine', 'ejs')
+
 //styling
 app.use('/css', express.static(path.resolve(__dirname, 'public/css')))
 
