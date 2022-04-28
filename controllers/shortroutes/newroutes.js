@@ -9,7 +9,9 @@ exports.homeRoutes=(req, res)=>{
     })
 }
 exports.addPlaylist=(req, res)=>{
-    res.render('newpl')
+    res.render('newpl', (err, )=>{
+        console.log(err)
+    })
 }
 // exports.editPlaylist=(req, res)=>{
 //     res.render('editpl')
