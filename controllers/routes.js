@@ -7,11 +7,6 @@ let playlistDB = require('../models/playlist')
 
 
 //home heroku route
-route.get('/', (req, res) =>{
-    res.redirect('/playlist', (err, )=>{
-        console.log(err)
-    })
-})
 
 //homeroute
 route.get('/playlist', shortRoute.homeRoutes)
