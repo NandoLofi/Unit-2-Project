@@ -1,16 +1,19 @@
-<% for(let i=0; i < playlist.length; i++) { %>
+<% for(let i=1; i < playlist.length; i++) { %>
     <tr>
-        <td><%=playlist[i].name%> </td>    
-        <td><%=playlist[i].link%> </td>
-        <td><%=playlist[i].desc%> </td>
+        <td><%=playlist[i].name%></td>    
+        <td><%=playlist[i].link%></td>
+        <td><%=playlist[i].desc%></td>
         <td>
-            <a href="/playlist/<%=playlist[i]._id%>/editplaylist " class="edit">
-                <span class="text-gradient"><i class="fa-solid fa-pen-clip"></i></span>
+            <a href="/playlist/<%=playlist[i]._id%>/editplaylist ">
+                <form action="/playlist/<%=playlist[i]._id%>/editplaylist">    
+                <input type="submit" value="Edit">
+                </form>
             </a>
+        </td>
+        <td>
             <a href="/playlist/<%=playlist[i]._id%>">
                 <form action="/playlist/<%=playlist[i]._id%>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete">
-                <!-- <span class="text-gradient"><i class="fa-solid fa-ban"></i></span> -->
                 </form>
             </a>
         </td>        

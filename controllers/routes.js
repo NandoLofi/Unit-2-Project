@@ -10,8 +10,8 @@ route.get('/', (req, res)=>{
 })
 
 //index route
-route.get('/playlist', (req, res) =>{
-    playlistDB.find({}, (err, allPlaylist) =>{
+route.get('/playlist', (req, res) => {
+    playlistDB.find({}, (err, allPlaylist) => {
         res.render('index', {playlist: allPlaylist})
     })
 })

@@ -63,7 +63,7 @@ table{
     text-align: center;
     border-top: 1px solid var(--border-btn);
 }
-@media only screen and (mad-width: 1024px){
+/* @media only screen and (mad-width: 1024px){
     table, thead, tbody, th, td, tr{
         display:block;
     }
@@ -81,4 +81,4 @@ table{
         position: relative;
     }
 
-}
+} */
